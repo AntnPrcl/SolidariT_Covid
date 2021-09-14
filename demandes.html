@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>SolidariT - Demandes de courses</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<body>
+<div id="container">
+    <h2 align="center">Demandes de courses</h2>
+    <form action="post.php" method="post" >
+        <div class="form-group">
+            <label for="nom">Nom :</label>
+            <input type="text" class="form-control" label="nom" id="nom" name="nom">
+        </div>
+        <div class="form-group">
+            <label for="prenom">Pr&eacute;nom :</label>
+            <input type="text" class="form-control" label="prenom" id="prenom" name="prenom">
+        </div>
+        <div class="form-group">
+            <label for="telephone">T&eacute;l&eacute;phone :</label>
+            <input type="tel" class="form-control" label="telephone" id="telephone" name="telephone">
+        </div>
+        <div class="form-group">
+            <label for="email">Adresse e-mail :</label>
+            <input type="email" class="form-control" label="email" id="email" name="email">
+        </div>
+        <div class="form-group">
+            <label for="n_rue">Num&eacute;ro de rue :</label>
+            <input type="number" class="form-control" label="n_rue" id="n_rue" name="n_rue">
+        </div>
+        <div class="form-gorup">
+            <label for="rue">Rue :</label>
+            <input type="text" class="form-control" label="rue" id="rue" name="rue">
+        </div>
+        <div class="form-group">
+            <label for="cp_ville">Code postal :</label>
+            <input type="number" class="form-control" label="cp_ville" id="cp_ville" name="cp_ville">
+        </div>
+        <div class="form-group">
+            <label for="ville">Ville :</label>
+            <input type="text" class="form-control" label="ville" id="ville" name="ville">
+        </div>
+        <div id="button-container">
+            <button  type="submit" class="btn btn-primary submit_button">Soumettre votre demande</button>
+        </div>
+    </form>
+</div>
+
+</body>
+</html>

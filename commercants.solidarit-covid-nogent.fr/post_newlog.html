@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>SolidariT - Commercants</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<body>
+<h2>Bienvenue sur</h2>
+<h1>SolidariT - Acc&egrave;s commercants</h1>
+<h3>Cr&eacute;ation d'un acc&egrave;s</h3>
+
+<div id="log_container">
+
+    <div id="error1" class="alert alert-danger" style="visibility: hidden">Les deux mots de passe saisis sont diff&eacute;rents</div>
+    <form action="post_newlog.php" method="post">
+        <div class="form-group">
+            <label for="login">Identifiant :</label>
+            <input type="text" class="form-control" name="login" id="login">
+        </div>
+        <div class="form-group">
+            <label for="password">Mot de passe :</label>
+            <input type="password" class="form-control" name="password" id="password">
+        </div>
+        <div class="form-group">
+            <label for="password_check">Retapez le mot de passe :</label>
+            <input type="password" class="form-control" name="password_check" id="password_check">
+        </div>
+        <div id="button-container">
+            <button type="submit" class="btn btn-lg btn-primary">Se connecter</button>
+        </div>
+    </form>
+    <script>
+        function $_GET(param) {
+            var vars = {};
+            window.location.href.replace( location.hash, '' ).replace(
+                /[?&]+([^=&]+)=?([^&]*)?/gi, // regexp
+                function( m, key, value ) { // callback
+                    vars[key] = value !== undefined ? value : '';
+                }
+            );
+
+            if ( param ) {
+                return vars[param] ? vars[param] : null;
+            }
+            return vars;
+        }
+
+        var err = $_GET('err');
+        var elem = document.getElementById('error1');
+        if (err == 1) {
+            elem.style.visibility = 'visible';
+        }
+    </script>
+</div>
+</body>
+</html>
